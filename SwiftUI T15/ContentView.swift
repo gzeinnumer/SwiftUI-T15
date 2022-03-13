@@ -9,8 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack{
+            Color.blue.ignoresSafeArea()
+            
+            VStack{
+                Text("SwiftUI for iOS 14")
+                    .bold()
+            }
+            .frame(width: 300, height: 200)
+            .background(Color.white)
+            .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
+        }
     }
 }
 
